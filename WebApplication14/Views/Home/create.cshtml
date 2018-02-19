@@ -1,0 +1,41 @@
+﻿@model WebApplication14.Models.PersonModel
+
+@{
+    ViewBag.Title = "create";
+}
+
+<html>
+<head>
+    <style>
+
+    </style>
+
+    <link href="~/Content/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <form id="contact" action="Create" method="post">
+            <h3>Create Person</h3>
+
+            <fieldset>
+                <input type="text" name="FirstName" placeholder="First name" tabindex="1"  required />
+            </fieldset>
+            <fieldset>
+                <input type="text" name="LastName" placeholder="Last Name" tabindex="2"  required />
+            </fieldset>
+            <fieldset>
+                <input type="text" name="Age" placeholder="Age" tabindex="3"  required />
+            </fieldset>
+            <fieldset>
+                <input type="email" name="Email" placeholder="Email" tabindex="4"  required />
+            </fieldset>
+                <input class="btn btn-danger"  type="submit" value="Create"/>
+                <input class="btn btn-success" type="submit" value="Cancel" onclick="location.href='/home/index'" />
+           
+        </form>
+    </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<WebApplication14.Models.PersonModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<p>
+    <input class="btn btn-warning" style="margin-top:10px;" type="button" value="Create"onclick="location.href='/home/Create'" />
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            FirstName
+        </th>
+        <th>
+          LastName
+        </th>
+        <th>
+          Age
+        </th>
+        <th>
+           Email
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+           @item.FirstName
+        </td>
+        <td>
+            @item.LastName
+        </td>
+        <td>
+            @item.Age
+        </td>
+        <td>
+            @item.Email
+        </td>
+        <td>
+            <input type="button" class="btn btn-danger"  value="Edit" name="id" onclick="location.href='/home/edit?id=@item.Personid'" />
+            <input type="button" class="btn btn-success" value="Delete" name="id" onclick="location.href='/home/delete?id=@item.Personid'" />
+        </td>
+    </tr>
+}
+
+</table>
